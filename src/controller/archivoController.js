@@ -6,10 +6,10 @@ import { OpenAI } from 'openai';
 export const subirArchivo = async (req, res) => {
     res.setHeader("Content-Type", "applicaton/json")
     if (!req.file) {
-        res.status(400).send({ message: 'No se hay ningún archivo PDF.' });
+        res.status(400).send({ message: 'No hay ningún archivo PDF.' });
     }
     if (!req.body.question) {
-        res.status(400).send({ message: 'No se hay ninguna pregunta.' });
+        res.status(400).send({ message: 'No  hay ninguna pregunta.' });
     }
     //llamar al codigo para configurar el archivo
     const text = await procesarArchivo(
